@@ -14,7 +14,7 @@ const rootQuery = new GraphQLObjectType({
       type: new GraphQLList(player),
       resolve(parentValue, args) {
         return axios
-          .get(`https://localhost:3004/players`)
+          .get(`http://localhost:3004/players`)
           .then(response => response.data);
       }
     },
@@ -22,7 +22,7 @@ const rootQuery = new GraphQLObjectType({
       type: new GraphQLList(team),
       resolve(parentValue, args) {
         return axios
-          .get(`https://localhost:3004/teams`)
+          .get(`http://localhost:3004/teams`)
           .then(response => response.data);
       }
     }
